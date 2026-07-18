@@ -1,0 +1,127 @@
+<mxfile host="Electron">
+  <diagram name="Sequence - Confirmer une livraison" id="seq-NutriCI_sequence_confirmer_livraison">
+    <mxGraphModel dx="968" dy="645" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ll_0" parent="1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value=":GestionCommande" vertex="1">
+          <mxGeometry height="40" width="140" x="30" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ll_0_line" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#666666;fontSize=14;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="60" as="sourcePoint" />
+            <mxPoint x="100" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ll_1" parent="1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value=":Livreur (app)" vertex="1">
+          <mxGeometry height="40" width="140" x="250" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ll_1_line" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#666666;fontSize=14;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="60" as="sourcePoint" />
+            <mxPoint x="320" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ll_2" parent="1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value="Livreur" vertex="1">
+          <mxGeometry height="40" width="140" x="470" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ll_2_line" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#666666;fontSize=14;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="60" as="sourcePoint" />
+            <mxPoint x="540" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ll_3" parent="1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value="Client" vertex="1">
+          <mxGeometry height="40" width="140" x="690" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ll_3_line" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#666666;fontSize=14;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="60" as="sourcePoint" />
+            <mxPoint x="760" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act_0" parent="1" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#333333;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="580" width="10" x="95" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="act_1" parent="1" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#333333;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="580" width="10" x="315" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="act_2" parent="1" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#333333;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="460" width="10" x="535" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="act_3" parent="1" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#333333;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="100" width="10" x="755" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="m0" edge="1" parent="1" style="endArrow=block;endFill=1;endSize=8;html=1;fontSize=14;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=bottom;" value="1: notifier(commande EXPEDIEE) (RG7)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="100" as="sourcePoint" />
+            <mxPoint x="320" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1" edge="1" parent="1" style="endArrow=block;endFill=1;endSize=8;html=1;fontSize=14;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=bottom;" value="2: afficherAdresse(commande)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="160" as="sourcePoint" />
+            <mxPoint x="540" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" edge="1" parent="1" style="endArrow=block;endFill=1;endSize=8;html=1;fontSize=14;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=bottom;" value="3: livrerColis()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="220" as="sourcePoint" />
+            <mxPoint x="760" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" edge="1" parent="1" style="endArrow=block;endFill=1;endSize=8;html=1;fontSize=14;dashed=1;strokeColor=#2C7A2C;fontColor=#2C7A2C;align=center;verticalAlign=bottom;" value="4: signer()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="280" as="sourcePoint" />
+            <mxPoint x="540" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" edge="1" parent="1" style="endArrow=block;endFill=1;endSize=8;html=1;fontSize=14;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=bottom;" value="5: confirmerLivraison(signature)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="340" as="sourcePoint" />
+            <mxPoint x="320" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" edge="1" parent="1" style="endArrow=block;endFill=1;endSize=8;html=1;fontSize=14;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=bottom;" value="6: confirmerLivraison(cmd, signature)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="400" as="sourcePoint" />
+            <mxPoint x="100" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" edge="1" parent="1" style="endArrow=block;endFill=1;endSize=8;html=1;fontSize=14;dashed=1;strokeColor=#2C7A2C;fontColor=#2C7A2C;align=center;verticalAlign=bottom;" value="7: accuseReception()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="490" as="sourcePoint" />
+            <mxPoint x="320" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" edge="1" parent="1" style="endArrow=block;endFill=1;endSize=8;html=1;fontSize=14;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=bottom;" value="8: signalerProbleme(motif)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="580" as="sourcePoint" />
+            <mxPoint x="320" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" edge="1" parent="1" style="endArrow=block;endFill=1;endSize=8;html=1;fontSize=14;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=bottom;" value="9: enregistrerIncident(cmd, motif)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="640" as="sourcePoint" />
+            <mxPoint x="100" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fr0" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;fontSize=14;fillColor=none;width=140;height=55;align=left;verticalAlign=top;fontStyle=1;" value="alt [client absent / adresse incorrecte -&amp;gt; USL03]" vertex="1">
+          <mxGeometry height="110" width="200" x="335" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="djnkIws1LOHYKZ4loYLA-3" parent="1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value=":GestionCommande" vertex="1">
+          <mxGeometry height="40" width="140" x="30" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="djnkIws1LOHYKZ4loYLA-4" parent="1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value=":Livreur (app)" vertex="1">
+          <mxGeometry height="40" width="140" x="250" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="djnkIws1LOHYKZ4loYLA-5" parent="1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value="Livreur" vertex="1">
+          <mxGeometry height="40" width="140" x="470" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="djnkIws1LOHYKZ4loYLA-6" parent="1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value="Client" vertex="1">
+          <mxGeometry height="40" width="140" x="690" y="670" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

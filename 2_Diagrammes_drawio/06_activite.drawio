@@ -1,0 +1,148 @@
+<mxfile host="Electron">
+  <diagram name="Diagramme d&#39;activite - Commande" id="activite-nutrici">
+    <mxGraphModel dx="1407" dy="938" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="laneClient" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=26;horizontal=1;fontStyle=1;fillColor=#e6f2ff;fontSize=13;" value="Client" vertex="1">
+          <mxGeometry height="900" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="nInit" parent="laneClient" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=13;" value="" vertex="1">
+          <mxGeometry height="24" width="24" x="100" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aConnexion" parent="laneClient" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Se connecter / creer un compte (USC01)" vertex="1">
+          <mxGeometry height="50" width="180" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="aParcourir" parent="laneClient" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Parcourir / rechercher un produit (USC02-03)" vertex="1">
+          <mxGeometry height="50" width="180" x="40" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="aPanier" parent="laneClient" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Ajouter au panier, ajuster quantites (USC04-05)" vertex="1">
+          <mxGeometry height="50" width="180" x="40" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="aValider" parent="laneClient" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Valider le panier (USC06)" vertex="1">
+          <mxGeometry height="50" width="180" x="40" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="aChoisirMode" parent="laneClient" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Choisir mode de paiement Mobile Money" vertex="1">
+          <mxGeometry height="50" width="180" x="40" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="laneSys" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=26;horizontal=1;fontStyle=1;fillColor=#f5f5f5;fontSize=13;" value="Systeme NutriCI" vertex="1">
+          <mxGeometry height="900" width="340" x="260" as="geometry" />
+        </mxCell>
+        <mxCell id="dStock" parent="laneSys" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Stock suffisant (RG3)" vertex="1">
+          <mxGeometry height="70" width="140" x="90" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="aCalcTotal" parent="laneSys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Calculer le total + frais livraison (RG9)" vertex="1">
+          <mxGeometry height="50" width="200" x="40" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="dPaiement" parent="laneSys" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Paiement recu sous 24h ? (RG4)" vertex="1">
+          <mxGeometry height="70" width="140" x="90" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="aDecrement" parent="laneSys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Decrementer le stock" vertex="1">
+          <mxGeometry height="50" width="200" x="60" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="dStockBas" parent="laneSys" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Stock &amp;lt; 5 (RG8)" vertex="1">
+          <mxGeometry height="70" width="140" x="90" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="aAlerte" parent="laneSys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Alerter l&#39;administrateur" vertex="1">
+          <mxGeometry height="50" width="130" x="30" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="aPassePayee" parent="laneSys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Passer la commande a &#39;Payee&#39;" vertex="1">
+          <mxGeometry height="50" width="130" x="180" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="By3i3RTWfe-6ShZlqGP2-1" parent="laneSys" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=13;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="260" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" edge="1" parent="laneSys" source="dStock" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;entryX=0.356;entryY=0.941;entryDx=0;entryDy=0;entryPerimeter=0;" target="By3i3RTWfe-6ShZlqGP2-1" value="non">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260.08002772623274" y="353.383568210348" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="By3i3RTWfe-6ShZlqGP2-2" parent="laneSys" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=13;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="260" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="f9" edge="1" parent="laneSys" source="dPaiement" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;entryX=0.285;entryY=1.032;entryDx=0;entryDy=0;entryPerimeter=0;" target="By3i3RTWfe-6ShZlqGP2-2" value="non (timeout/echec)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260.0040396817117" y="592.3113455349785" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="laneAdmin" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=26;horizontal=1;fontStyle=1;fillColor=#fff2e0;fontSize=13;" value="Administrateur" vertex="1">
+          <mxGeometry height="900" width="240" x="600" as="geometry" />
+        </mxCell>
+        <mxCell id="aValiderCmd" parent="laneAdmin" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Valider la commande&lt;div&gt;(-&amp;gt; En preparation)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="180" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aExpedier" parent="laneAdmin" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Preparer / expedier la commande" vertex="1">
+          <mxGeometry height="50" width="180" x="30" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="laneLivreur" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=26;horizontal=1;fontStyle=1;fillColor=#e8f5e9;fontSize=13;" value="Livreur" vertex="1">
+          <mxGeometry height="900" width="260" x="840" as="geometry" />
+        </mxCell>
+        <mxCell id="aNotif" parent="laneLivreur" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Recevoir notification (commande Expediee) (RG7)" vertex="1">
+          <mxGeometry height="50" width="180" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aLivrer" parent="laneLivreur" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Livrer et recueillir&amp;nbsp;&lt;div&gt;la signature du client&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="180" x="45" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="By3i3RTWfe-6ShZlqGP2-3" parent="laneLivreur" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=13;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="120" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="f19" edge="1" parent="laneLivreur" source="aLivrer" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;entryX=0.511;entryY=-0.074;entryDx=0;entryDy=0;entryPerimeter=0;" target="By3i3RTWfe-6ShZlqGP2-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="123.25621741421674" y="210.0659345649401" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f0" edge="1" parent="1" source="nInit" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aConnexion" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" edge="1" parent="1" source="aConnexion" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aParcourir" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" edge="1" parent="1" source="aParcourir" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aPanier" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" edge="1" parent="1" source="aPanier" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aValider" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" edge="1" parent="1" source="aValider" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="dStock" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" edge="1" parent="1" source="dStock" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aCalcTotal" value="oui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7" edge="1" parent="1" source="aCalcTotal" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aChoisirMode" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8" edge="1" parent="1" source="aChoisirMode" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="dPaiement" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10" edge="1" parent="1" source="dPaiement" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aDecrement" value="oui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11" edge="1" parent="1" source="aDecrement" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="dStockBas" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f12" edge="1" parent="1" source="dStockBas" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aAlerte" value="oui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f13" edge="1" parent="1" source="dStockBas" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aPassePayee" value="non">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f14" edge="1" parent="1" source="aAlerte" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aPassePayee" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15" edge="1" parent="1" source="aPassePayee" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aValiderCmd" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f16" edge="1" parent="1" source="aValiderCmd" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aExpedier" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f17" edge="1" parent="1" source="aExpedier" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aNotif" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f18" edge="1" parent="1" source="aNotif" style="endArrow=block;html=1;fontSize=13;endFill=1;endSize=8;" target="aLivrer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

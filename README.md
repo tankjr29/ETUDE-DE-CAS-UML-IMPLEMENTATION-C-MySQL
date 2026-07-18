@@ -1,2 +1,0 @@
-# ETUDE-DE-CAS-UML-IMPLEMENTATION-C-MySQL
-Projet de Fin de Modules UML

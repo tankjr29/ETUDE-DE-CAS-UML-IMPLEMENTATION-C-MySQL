@@ -1,0 +1,31 @@
+<mxfile host="Electron">
+  <diagram name="Diagramme de deploiement" id="deploy-nutrici">
+    <mxGraphModel dx="1290" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dPoste" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&amp;lt;&amp;lt;Device&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Poste Client&lt;/span&gt;&lt;div&gt;&lt;div&gt;(navigateur / app mobile)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dApp" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&amp;lt;&amp;lt;Device&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;div&gt;Serveur d&#39;application&lt;div&gt;(C++ / API REST)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="380" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dBdd" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&amp;lt;&amp;lt;Device&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;div&gt;Serveur de base de donnees (MySQL)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="770" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="dPaiement" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&amp;lt;&amp;lt;Device&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;div&gt;Serveur externe&lt;div&gt;Mobile Money&lt;/div&gt;&lt;div&gt;(Orange/Wave/MTN API)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="220" x="720" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" edge="1" parent="1" source="dPoste" style="endArrow=block;html=1;fontSize=14;endFill=1;endSize=8;" target="dApp" value="HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" edge="1" parent="1" source="dApp" style="endArrow=block;html=1;fontSize=14;endFill=1;endSize=8;" target="dBdd" value="TCP/IP 3306&lt;div&gt;(connecteur MySQL)&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" edge="1" parent="1" source="dApp" style="endArrow=block;html=1;fontSize=14;endFill=1;endSize=8;" target="dPaiement" value="HTTPS / API\&lt;div&gt;Mobile Money&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

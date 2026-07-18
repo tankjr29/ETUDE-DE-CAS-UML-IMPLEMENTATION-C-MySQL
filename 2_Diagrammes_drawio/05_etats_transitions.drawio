@@ -1,0 +1,49 @@
+<mxfile host="Electron">
+  <diagram name="Etats-transitions Commande" id="etats-nutrici">
+    <mxGraphModel dx="1191" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="init" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="24" width="24" x="10" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="sEnAttente" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="EnAttente" vertex="1">
+          <mxGeometry height="60" width="150" x="90" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="sAnnulee" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" value="Annulee" vertex="1">
+          <mxGeometry height="60" width="150" x="420" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sPayee" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Payee" vertex="1">
+          <mxGeometry height="60" width="150" x="260" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="sPreparation" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="EnPreparation" vertex="1">
+          <mxGeometry height="60" width="160" x="470" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="sExpediee" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Expediee" vertex="1">
+          <mxGeometry height="60" width="150" x="670" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="sLivree" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" value="Livree" vertex="1">
+          <mxGeometry height="80" width="150" x="940" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="t0" edge="1" parent="1" source="init" style="endArrow=block;html=1;fontSize=14;rounded=0;endFill=1;endSize=8;" target="sEnAttente" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" edge="1" parent="1" source="sEnAttente" style="endArrow=block;html=1;fontSize=14;rounded=0;endFill=1;endSize=8;" target="sAnnulee" value="annulation client (RG10)&lt;br&gt;ou timeout 24h (RG4)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" edge="1" parent="1" source="sEnAttente" style="endArrow=block;html=1;fontSize=14;rounded=0;endFill=1;endSize=8;" target="sPayee" value="paiement valide (RG4)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" edge="1" parent="1" source="sPayee" style="endArrow=block;html=1;fontSize=14;rounded=0;endFill=1;endSize=8;" target="sPreparation" value="validation admin (RG6)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" edge="1" parent="1" source="sPreparation" style="endArrow=block;html=1;fontSize=14;rounded=0;endFill=1;endSize=8;" target="sExpediee" value="expedition">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" edge="1" parent="1" source="sExpediee" style="endArrow=block;html=1;fontSize=14;rounded=0;endFill=1;endSize=8;" target="sLivree" value="signature client (RG7)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
