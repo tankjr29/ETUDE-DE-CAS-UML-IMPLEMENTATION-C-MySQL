@@ -1,5 +1,5 @@
 #include <iostream>
-#include <mysql/mysql.h>
+#include <mysql.h>
 #include <vector>
 #include <sstream>
 #include "Produit.h"
@@ -11,7 +11,7 @@
 MYSQL* connecter() {
     MYSQL* conn = mysql_init(NULL);
     if (!mysql_real_connect(conn, "localhost", "root",
-                             "password", "nutrici", 3306, NULL, 0)) {
+                             "root", "nutrici", 3306, NULL, 0)) {
         std::cerr << "Erreur MySQL : " << mysql_error(conn) << std::endl;
         return nullptr;
     }
