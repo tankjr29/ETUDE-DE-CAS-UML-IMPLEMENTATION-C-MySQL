@@ -29,8 +29,7 @@ NutriCI_Projet/
     ├── Paiement.h
     ├── LigneCommande.h
     ├── Commande.h
-    ├── main.cpp                           ← démo automatique (conforme au squelette du sujet)
-    ├── main_interactif.cpp                ← version avec menu console interactif (bonus)
+    ├── main.cpp                           ← démo automatique 
     └── .vscode/
         ├── tasks.json                     ← tâche de compilation VS Code
         ├── c_cpp_properties.json          ← configuration IntelliSense
